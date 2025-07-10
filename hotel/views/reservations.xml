@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- تعريف طريقة عرض القائمة -->
+    <record model="ir.ui.view" id="hotel_reservations_list">
+        <field name="name">hotel.reservations.list</field>
+        <field name="model">hotel.reservations</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="reserve_no"/>
+                <field name="customer_no"/>
+                <field name="date_st"/>
+                <field name="date_en"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- تعريف طريقة عرض الفورم -->
+    <record model="ir.ui.view" id="hotel_reservations_form">
+        <field name="name">hotel.reservations.form</field>
+        <field name="model">hotel.reservations</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title">
+                         <h1>
+                             <field name="reserve_no"/>
+                         </h1>
+                    </div>
+                <group>
+                    <field name="customer_no"/>
+                </group>
+                <group>
+                <field name="date_st"/>
+                <field name="date_en"/>
+                </group>
+                    <notebook>
+                        <page string="Stay Days ">
+                            <group>
+                                <field name="stay_days"/>
+                                <field name="price_stay"/>
+                            </group>
+                        </page>
+                    </notebook>
+
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- تعريف الإجراء (Action) -->
+    <record model="ir.actions.act_window" id="hotel_reservations_action_window">
+        <field name="name">Hotel reservations</field>
+        <field name="res_model">hotel.reservations</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="hotel_reservations_list"/>
+    </record>
+
+
+</odoo>

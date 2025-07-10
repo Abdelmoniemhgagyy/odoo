@@ -1,0 +1,6 @@
+<odoo>
+    <menuitem name="Web Scraped" id="web_scraped_root_menu" />
+    <menuitem name="Web Scraped" sequence="1" id="web_scraped_menu" parent="web_scraped_root_menu" action="action_web_scraped"/>
+    <menuitem name="Blogs" id="scraped_blog_menu" parent="web_scraped_root_menu" action="action_scraped_blog"/>
+    <menuitem name="Static Page" id="scraped_page_menu" parent="web_scraped_root_menu" action="action_scraped_page"/>
+</odoo>

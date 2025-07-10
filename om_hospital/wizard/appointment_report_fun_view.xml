@@ -1,0 +1,30 @@
+<odoo>
+        <record model="ir.actions.act_window" id="actions_appointment_wizard_func_report">
+                <field name="name">Appointment Report</field>
+                <field name="res_model">appointment.report.wizard.by.func</field>
+                <field name="view_mode">form</field>
+                <field name="target">new</field>
+        </record>
+
+
+
+<record model="ir.ui.view" id="appointment_wizard_report_func_form">
+    <field name="name">appointment.report.wizard.by.func.form</field>
+    <field name="model">appointment.report.wizard.by.func</field>
+    <field name="arch" type="xml">
+        <form>
+            <group>
+                <field name="gender"/>
+            </group>
+            <group>
+                <field name="age"/>
+            </group>
+            <footer>
+                <button name="print_report" type="object" string="Print Pdf" class="btn-primary"/>
+                <button special="cancel" string="Cancel" class="btn-secondary"/>
+            </footer>
+        </form>
+    </field>
+</record>
+
+</odoo>

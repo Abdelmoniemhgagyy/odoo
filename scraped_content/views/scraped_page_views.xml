@@ -1,0 +1,35 @@
+<odoo>
+    <record model="ir.ui.view" id="scraped_page_form">
+        <field name="name">scraped.page.form</field>
+        <field name="model">scraped.page</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="title"/>
+                        <field name="content"/>
+                        <field name="source_url"/>
+                        <field name="status"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="scraped_page_tree">
+        <field name="name">scraped.page.tree</field>
+        <field name="model">scraped.page</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="title"/>
+                <field name="status"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_scraped_page">
+        <field name="name">Scraped pages</field>
+        <field name="res_model">scraped.page</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

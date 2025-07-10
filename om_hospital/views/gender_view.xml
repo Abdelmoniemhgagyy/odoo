@@ -1,0 +1,25 @@
+<odoo>
+
+    <menuitem name="Gender" id="menu_hospital_gender" parent="menu_hospital_root" />
+
+    <record model="ir.actions.act_window" id="hospital_male_action">
+        <field name="name">Hospital Patient</field>
+        <field name="res_model">hospital.patient</field>
+        <field name="view_mode">tree,form,kanban</field>
+        <field name="context">{"default_gender":"male",'hide_gender':1}</field>
+    </record>
+
+    <menuitem name="Male" id="menu_hospital_male" parent="menu_hospital_gender" action="hospital_male_action"/>
+
+
+    <record model="ir.actions.act_window" id="hospital_female_action">
+        <field name="name">Hospital Patient</field>
+        <field name="res_model">hospital.patient</field>
+        <field name="view_mode">tree,form,kanban</field>
+        <field name="context">{"default_gender":"female"}</field>
+        <field name="domain">[('gender','=','female')]</field>
+    </record>
+    <menuitem name="Female" id="menu_hospital_female" parent="menu_hospital_gender" action="hospital_female_action"/>
+
+</odoo>
+

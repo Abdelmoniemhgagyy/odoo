@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <record id="act_view_hotba" model="ir.actions.act_window">
+            <field name="name">Hotba</field>
+            <field name="res_model">hotba</field>
+            <field name='view_mode'>tree,form</field>
+    </record>
+    <record model="ir.ui.view" id="hotba.list">
+      <field name="name">Hotba</field>
+      <field name="model">hotba</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="shahik_id"/>
+        </tree>
+      </field>
+    </record>
+
+</odoo>

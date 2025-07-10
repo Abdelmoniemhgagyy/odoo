@@ -1,0 +1,38 @@
+<odoo>
+    <record model="ir.actions.act_window" id="action_gym_subscriptions">
+            <field name="name">Subscriptions</field>
+            <field name="res_model">gym.subscriptions</field>
+            <field name="view_mode">tree,form,kanban</field>
+            <field name="view_id" eval="False"/>
+    </record>
+    <record model="ir.ui.view" id="gym_subscriptions_form">
+        <field name="name">gym_subscriptions_form</field>
+        <field name="model">gym.subscriptions</field>
+        <field name="arch" type="xml">
+            <form>
+             <sheet>
+                     <group>
+                         <field name="subscription_id"/>
+                     </group>
+                     <group>
+                         <field name="price"/>
+                     </group>
+             </sheet>
+            </form>
+        </field>
+    </record>
+     <record model="ir.ui.view" id="gym_subscriptions_tree">
+        <field name="name">gym_subscriptions_tree</field>
+        <field name="model">gym.subscriptions</field>
+        <field name="arch" type="xml">
+            <tree>
+                          <field name="subscription_id"/>
+                          <field name="price"/>
+<!--                          <field name="subscription_id"/>-->
+            </tree>
+        </field>
+    </record>
+<menuitem name="subscriptions" id="gym_subscriptions_menu" parent="gym_root_menu" action="action_gym_subscriptions" />
+
+
+</odoo>

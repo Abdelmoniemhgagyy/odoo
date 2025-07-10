@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!--    Root Menu -->
+    <menuitem name="Hotel" id="hotel_menu_root" sequence="1"/>
+
+    <!-- Employee Menu -->
+    <menuitem name="Employee" id="hotel_employee_menu" parent="hotel_menu_root" action="hotel_employee_action_window"/>
+    <!-- Customer Menu -->
+    <menuitem name="customer" id="hotel_customer_menu" parent="hotel_menu_root" action="hotel_customer_action_window"/>
+
+    <!--    Reservations & Rooms Menu -->
+    <menuitem name="Reservations" id="hotel_reservations_menu" parent="hotel_menu_root"/>
+    <menuitem name="Reservation" id="hotel_reservation_menu" parent="hotel_reservations_menu" action="hotel_reservations_action_window"/>
+    <menuitem name="Rooms" id="hotel_rooms_menu" parent="hotel_reservations_menu" action="hotel_rooms_action_window"/>
+    <!--   Foods & Sales Foods-->
+    <menuitem name="Foods" id="hotel_foods_menu" parent="hotel_menu_root" />
+    <menuitem name="Food" id="hotel_food_menu" parent="hotel_foods_menu" action="hotel_foods_action_window"/>
+    <menuitem name="Sales Food" id="hotel_sales_food_menu" parent="hotel_foods_menu" action="hotel_sales_foods_action_window"/>
+
+</odoo>

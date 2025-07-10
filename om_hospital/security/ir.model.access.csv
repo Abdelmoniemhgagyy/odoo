@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hospital_patient,hospital_patient,model_hospital_patient,,1,1,1,1
+access_hospital_doctor,hospital_doctor,model_hospital_doctor,,1,1,1,1
+access_hospital_appointment,hospital_appointment,model_hospital_appointment,,1,1,1,1
+access_create_appointment,create_appointment,model_create_appointment_wizard,,1,1,1,1
+access_appointment_prescription_lines,create_appointment.prescription.lines,model_appointment_prescription_lines,,1,1,1,1
+access_appointment_report,create_appointment.report,model_appointment_report_wizard,,1,1,1,1
+access_appointment_report_fun,create_appointment.report_fun,model_appointment_report_wizard_by_func,,1,1,1,1

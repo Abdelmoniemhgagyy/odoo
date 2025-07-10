@@ -1,0 +1,69 @@
+<odoo>
+    <record model="ir.actions.act_window" id="action_gym_members">
+            <field name="name">Gym</field>
+            <field name="res_model">gym.members</field>
+            <field name="view_mode">tree,form,kanban</field>
+            <field name="view_id" eval="False"/>
+    </record>
+    <record model="ir.ui.view" id="gym_members_form">
+        <field name="name">gym_members_form</field>
+        <field name="model">gym.members</field>
+        <field name="arch" type="xml">
+            <form>
+             <sheet>
+
+                     <group>
+                          <field name="name"/>
+                     </group>
+                     <group>
+                          <field name="age"/>
+                          <field name="gender"/>
+                     </group>
+                     <group>
+                          <field name="phone"/>
+                     </group>
+                     <group>
+                          <field name="date_join"/>
+                          <field name="status"/>
+<!--                          <field name="subscription_id"/>-->
+                     </group>
+
+             </sheet>
+            </form>
+        </field>
+    </record>
+     <record model="ir.ui.view" id="gym_members_tree">
+        <field name="name">gym_members_tree</field>
+        <field name="model">gym.members</field>
+        <field name="arch" type="xml">
+            <tree>
+                          <field name="name"/>
+                          <field name="age"/>
+                          <field name="gender"/>
+                          <field name="phone"/>
+                          <field name="date_join"/>
+                          <field name="status"/>
+<!--                          <field name="subscription_id"/>-->
+            </tree>
+        </field>
+    </record>
+
+     <record id="ir_members_view_search" model="ir.ui.view">
+            <field name="model">gym.members</field>
+            <field name="arch" type="xml">
+                <search string="Filters">
+                    <field name="name" string="Filter Name"/>
+                    <separator/>
+                    <filter string="children" name="children" domain="[('age','&lt;=','18')]"/>
+                    <field name="age"/>
+                    <field name="gender"/>
+                </search>
+            </field>
+        </record>
+
+<menuitem name="Gym" id="gym_root_menu" />
+<menuitem name="Members" id="gym_members_menu" parent="gym_root_menu" />
+<menuitem name="Members"  sequence="0" id="gym_sub_members_menu" parent="gym_members_menu" action="action_gym_members" />
+
+
+</odoo>

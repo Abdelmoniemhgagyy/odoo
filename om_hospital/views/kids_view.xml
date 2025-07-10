@@ -1,0 +1,10 @@
+<odoo>
+    <record model="ir.actions.act_window" id="hospital_kids_action">
+        <field name="name">Hospital Patient</field>
+        <field name="res_model">hospital.patient</field>
+        <field name="view_mode">tree,form,kanban</field>
+        <field name="domain">[('age','&lt;=','18')]</field>
+    </record>
+    <menuitem name="Kids" id="menu_hospital_kids" parent="menu_hospital_patients_root" action="hospital_kids_action"/>
+</odoo>
+

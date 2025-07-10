@@ -1,0 +1,542 @@
+[
+     {
+          "id": 1,
+          "Job Title": "Junior Frontend Engineer (Angular)",
+          "Company": "Halan - حالا",
+          "Location": "القاهرة القاهرة مصر",
+          "Date Job": "قبل ٣شهر",
+          "Logo": null,
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 2,
+          "Job Title": "Front End Developer",
+          "Company": "SSC HR Solutions",
+          "Location": "القاهرة القاهرة مصر",
+          "Date Job": "قبل ١شهر",
+          "Logo": null,
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 3,
+          "Job Title": "Junior Full-Stack Engineer (.NET Core & Angular)",
+          "Company": "Halan - حالا",
+          "Location": "القاهرة القاهرة مصر",
+          "Date Job": "قبل ٢ أسبوع",
+          "Logo": "https://media.licdn.com/dms/image/v2/C4D0BAQFbuWv3FALCrQ/company-logo_100_100/company-logo_100_100/0/1656944631977/halan_logo?e=2147483647&v=beta&t=BM1zjxKD0S9jyDzjf4oMp52O8uMC1DKHCl8g6gqHLfg",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 4,
+          "Job Title": "Front-end Developer",
+          "Company": "BlueCloud Technologies",
+          "Location": "القاهرة القاهرة مصر",
+          "Date Job": "قبل ٣ أسبوع",
+          "Logo": "https://media.licdn.com/dms/image/v2/D4D0BAQEPDe5NSR_d_w/company-logo_100_100/B4DZY.7XzmGkAU-/0/1744812474167/bluecloud_logo?e=2147483647&v=beta&t=Bvfz2vaZxJwldFsIrdE8l_5YtH7Gnua_PTL3L0deh1g",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 5,
+          "Job Title": "Front End Developers - AI Training [Remote]",
+          "Company": "Braintrust",
+          "Location": "مصر",
+          "Date Job": "قبل ٥ أيام",
+          "Logo": "https://media.licdn.com/dms/image/v2/D560BAQElwT1kpc6sWw/company-logo_100_100/company-logo_100_100/0/1714395474106/usebraintrust_logo?e=2147483647&v=beta&t=APHLsDAnQ6u0-GV3Egv-SesyXtHIiN2TtFBSFW--Quo",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 6,
+          "Job Title": "Front-End Developer (Next.js & React.js)",
+          "Company": "UltaHost",
+          "Location": "مصر",
+          "Date Job": "قبل ٢شهر",
+          "Logo": "https://media.licdn.com/dms/image/v2/C4D0BAQG9aN83jmMQdw/company-logo_100_100/company-logo_100_100/0/1676483225376/ultahost_logo?e=2147483647&v=beta&t=YJA71B3S047cJSsxz4w97T1KQyQSeww1EqfPANESa58",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 7,
+          "Job Title": "Junior Frontend Developer (Angular)",
+          "Company": "Advansys",
+          "Location": "القاهرة القاهرة مصر",
+          "Date Job": "قبل ١شهر",
+          "Logo": "https://media.licdn.com/dms/image/v2/D4D0BAQHJMseSnXrxAQ/company-logo_100_100/company-logo_100_100/0/1732219032679/advansys_esc_logo?e=2147483647&v=beta&t=tstVlPhUEWgCa-7W85J_l9lrvxN0yNv7LU0lRjYe_G0",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 8,
+          "Job Title": "Junior Full-stack Developer (React.js + PHP)",
+          "Company": "scandiweb",
+          "Location": "مصر",
+          "Date Job": "قبل ٥شهر",
+          "Logo": "https://media.licdn.com/dms/image/v2/D4D0BAQFGgnV2DMFKyQ/company-logo_100_100/company-logo_100_100/0/1737663100937/scandiweb_logo?e=2147483647&v=beta&t=90tqim5zEvhq3y4Id3YAWgH12KLPmfUwTjaCtLvtmxY",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 9,
+          "Job Title": "Web Developer",
+          "Company": "Everest Minds",
+          "Location": "القاهرة القاهرة مصر",
+          "Date Job": "قبل ١ أعوام",
+          "Logo": "https://media.licdn.com/dms/image/v2/C4D0BAQFZYiIGxxUPog/company-logo_100_100/company-logo_100_100/0/1675692036689/everest_minds_logo?e=2147483647&v=beta&t=BjPv3RzuEA0Tby8UJHNvWV9Q2fMfNxBUoqgQWNO5xf4",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 10,
+          "Job Title": "Full Stack Developer",
+          "Company": "Nawy",
+          "Location": "القاهرة القاهرة مصر",
+          "Date Job": "قبل ١شهر",
+          "Logo": "https://media.licdn.com/dms/image/v2/D4D0BAQH9lYHPNTAonA/company-logo_100_100/company-logo_100_100/0/1733742340947/nawyestate_logo?e=2147483647&v=beta&t=9fotlOqB6u2byvagzeSeC1DiL2Anre5P25KC_Jc9tsY",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 11,
+          "Job Title": "SSP - R&D Front End Developer Intern",
+          "Company": "Siemens",
+          "Location": "القاهرة قسم ثان القاهرة الجديدة مصر",
+          "Date Job": "قبل ١ أسبوع",
+          "Logo": "https://media.licdn.com/dms/image/v2/D4D0BAQFK_4wGnzwPTQ/company-logo_100_100/company-logo_100_100/0/1719931174735/siemens_logo?e=2147483647&v=beta&t=iNZVOYYuYOnkz09IBCFrK9Ik8uTqP6ZDnhCEJjPouV4",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 12,
+          "Job Title": "Front End Developer",
+          "Company": "SSC HR Solutions",
+          "Location": "القاهرة القاهرة مصر",
+          "Date Job": "قبل ١ أسبوع",
+          "Logo": "https://media.licdn.com/dms/image/v2/D4D0BAQHpHEWgEkCKGA/company-logo_100_100/B4DZVHGyhTHkAU-/0/1740654719424/ssc_egypt_logo?e=2147483647&v=beta&t=5W7C6GQ699kB0nxRzKg5voc5cRuokdUA5KpHadxAvmw",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 13,
+          "Job Title": "Full Stack Engineer",
+          "Company": "Nawy",
+          "Location": "القاهرة مصر",
+          "Date Job": "قبل ٣ أسبوع",
+          "Logo": "https://media.licdn.com/dms/image/v2/D4D0BAQH9lYHPNTAonA/company-logo_100_100/company-logo_100_100/0/1733742340947/nawyestate_logo?e=2147483647&v=beta&t=9fotlOqB6u2byvagzeSeC1DiL2Anre5P25KC_Jc9tsY",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 14,
+          "Job Title": "Web Developer",
+          "Company": "Canonical",
+          "Location": "القاهرة القاهرة مصر",
+          "Date Job": "قبل ٣ أسبوع",
+          "Logo": "https://media.licdn.com/dms/image/v2/C560BAQEbIYAkAURcYw/company-logo_100_100/company-logo_100_100/0/1650566107463/canonical_logo?e=2147483647&v=beta&t=17jhZvUOD-0vAJw3nIGnkBiYtBbXfEriIhIo6TfDmzc",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 15,
+          "Job Title": "Web Developer",
+          "Company": "Canonical",
+          "Location": "القاهرة القاهرة مصر",
+          "Date Job": "قبل ٣ أسبوع",
+          "Logo": "https://media.licdn.com/dms/image/v2/C560BAQEbIYAkAURcYw/company-logo_100_100/company-logo_100_100/0/1650566107463/canonical_logo?e=2147483647&v=beta&t=17jhZvUOD-0vAJw3nIGnkBiYtBbXfEriIhIo6TfDmzc",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 16,
+          "Job Title": "Full Stack Developer",
+          "Company": "KnowledgeNet",
+          "Location": "القاهرة القاهرة مصر",
+          "Date Job": "قبل ١شهر",
+          "Logo": "https://media.licdn.com/dms/image/v2/C4D0BAQHUgP7qrTxmEg/company-logo_100_100/company-logo_100_100/0/1659347198849/knowledgenet_logo?e=2147483647&v=beta&t=735MBqCm7ACsXf-2dnH1zMfakBygiEBqULv69npNahA",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 17,
+          "Job Title": "(Junior/Senior) Full Stack Software Engineer",
+          "Company": "FabMinds",
+          "Location": "القاهرة القاهرة مصر",
+          "Date Job": "قبل ٢شهر",
+          "Logo": "https://media.licdn.com/dms/image/v2/C4E0BAQHeUQlM_oP0rA/company-logo_100_100/company-logo_100_100/0/1630652250947?e=2147483647&v=beta&t=4V0nb4e5kNt42UcwLLHkBKARU6R9ZKEIpv5gdOK-ADk",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 18,
+          "Job Title": "Frontend Software Engineer",
+          "Company": "Siemens EDA (Siemens Digital Industries Software)",
+          "Location": "القاهرة قسم ثان القاهرة الجديدة مصر",
+          "Date Job": "قبل ٢ أسبوع",
+          "Logo": "https://media.licdn.com/dms/image/v2/D4E0BAQHrR0xw9wrmCg/company-logo_100_100/company-logo_100_100/0/1720628766045/siemens_eda_logo?e=2147483647&v=beta&t=89DP_i4kHS3SO1g5LyaZaxMsHDH1Q06GEmP5qmSWj9E",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 19,
+          "Job Title": "Front-End Developer (ReactJS)",
+          "Company": "SWATX",
+          "Location": "القاهرة القاهرة مصر",
+          "Date Job": "قبل ١شهر",
+          "Logo": "https://media.licdn.com/dms/image/v2/D560BAQHWugk4yqxbOA/company-logo_100_100/company-logo_100_100/0/1719256637482?e=2147483647&v=beta&t=ht0JfC2BE1qe_5NbrUCUWihYl4_sxodW9GgexPNH_bo",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 20,
+          "Job Title": "Back-end Developer",
+          "Company": "Rabbit Technology",
+          "Location": "الاسكندرية الاسكندرية مصر",
+          "Date Job": "قبل ١شهر",
+          "Logo": "https://media.licdn.com/dms/image/v2/C560BAQFx6Fw-OoYwWA/company-logo_100_100/company-logo_100_100/0/1647012750337?e=2147483647&v=beta&t=8yQQET0SDV7h2Rjf75v4dyR-JYiGCAz7yENbeEPyvy8",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 21,
+          "Job Title": "Frontend Engineer",
+          "Company": "Blink22",
+          "Location": "مصر",
+          "Date Job": "قبل ١شهر",
+          "Logo": "https://media.licdn.com/dms/image/v2/D4D0BAQFH_S6F2N_mHA/company-logo_100_100/company-logo_100_100/0/1727961507909/blink22_logo?e=2147483647&v=beta&t=WoIKMenqdfbbOrUdOZiS9z2ZdyLaTB5RHteLXIy6zhc",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 22,
+          "Job Title": "Back-End Web Developer",
+          "Company": "DCarbon Global",
+          "Location": "القاهرة القاهرة مصر",
+          "Date Job": "قبل ٢شهر",
+          "Logo": "https://media.licdn.com/dms/image/v2/D4D0BAQHc9FrNBtRhxw/company-logo_100_100/B4DZarVL2sHAAQ-/0/1746631180861/dcarbon_global_logo?e=2147483647&v=beta&t=_IUCEC8gdfhgSZTU_RoobtXidL9d8RbmLJx6kPt-dUo",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 23,
+          "Job Title": "Full Stack Developer",
+          "Company": "Arcsen",
+          "Location": "القاهرة قسم المعادي مصر",
+          "Date Job": "قبل ١شهر",
+          "Logo": "https://media.licdn.com/dms/image/v2/D4D0BAQGtHiejCsY-Mg/company-logo_100_100/company-logo_100_100/0/1721484490902/coberg_logo?e=2147483647&v=beta&t=nH6pgTZn43URqLkhEztha7_r8OGGyFKT4fXcTquBHEA",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 24,
+          "Job Title": "Frontend Engineer",
+          "Company": "Implicit",
+          "Location": "القاهرة مصر",
+          "Date Job": "قبل ٣ أسبوع",
+          "Logo": "https://media.licdn.com/dms/image/v2/D560BAQGlSOmEWl7CYQ/company-logo_100_100/B56ZWA6wMIHsAY-/0/1741624640600/agolo_logo?e=2147483647&v=beta&t=G2E_g00XZFHMToYeVBk1knMSMgbcijPjJqUNQ3Mn9Ts",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 25,
+          "Job Title": "Full Stack Developer",
+          "Company": "SOCIALEYEZ",
+          "Location": "القاهرة مصر",
+          "Date Job": "قبل ٣ أسبوع",
+          "Logo": "https://media.licdn.com/dms/image/v2/D4D0BAQG5xqR6XjdgSA/company-logo_100_100/company-logo_100_100/0/1710147530392?e=2147483647&v=beta&t=lE5rzJWS80aPwkEVMwk5c_dcBgxU78VR68258DOhbZ4",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 26,
+          "Job Title": "Frontend Engineer",
+          "Company": "Envision Employment Solutions",
+          "Location": "القاهرة القاهرة الجديدة مصر",
+          "Date Job": "قبل ٢ أسبوع",
+          "Logo": "https://media.licdn.com/dms/image/v2/D4D0BAQHuMZSyDyIdaQ/company-logo_100_100/company-logo_100_100/0/1738607838599/envision_employment_solutions_logo?e=2147483647&v=beta&t=4gfQPNOS4qpmNGDi7LTCJy-pPeV2QkaitGBW3HS-jgE",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 27,
+          "Job Title": "Front-End Developer (Angular)",
+          "Company": "Müller's Solutions",
+          "Location": "القاهرة القاهرة مصر",
+          "Date Job": "قبل ١شهر",
+          "Logo": "https://media.licdn.com/dms/image/v2/D4D0BAQG0yLi3qRQJcA/company-logo_100_100/company-logo_100_100/0/1693659749583/mller_s_solutions_logo?e=2147483647&v=beta&t=TFm4fKvX_q6B7e-dw4YI64lCuFMz6x3FhFXZBRNiaYQ",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 28,
+          "Job Title": "Back-End Developer (NestJS)",
+          "Company": "UltaHost",
+          "Location": "مصر",
+          "Date Job": "قبل ٢شهر",
+          "Logo": "https://media.licdn.com/dms/image/v2/C4D0BAQG9aN83jmMQdw/company-logo_100_100/company-logo_100_100/0/1676483225376/ultahost_logo?e=2147483647&v=beta&t=YJA71B3S047cJSsxz4w97T1KQyQSeww1EqfPANESa58",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 29,
+          "Job Title": "Software Engineer",
+          "Company": "SSC HR Solutions",
+          "Location": "القاهرة القاهرة مصر",
+          "Date Job": "قبل ١شهر",
+          "Logo": "https://media.licdn.com/dms/image/v2/D4D0BAQHpHEWgEkCKGA/company-logo_100_100/B4DZVHGyhTHkAU-/0/1740654719424/ssc_egypt_logo?e=2147483647&v=beta&t=5W7C6GQ699kB0nxRzKg5voc5cRuokdUA5KpHadxAvmw",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 30,
+          "Job Title": "Full Stack PHP (Laravel) Developer Cairo",
+          "Company": "A3malouna.com",
+          "Location": "القاهرة القاهرة مصر",
+          "Date Job": "قبل ٣ أسبوع",
+          "Logo": "https://media.licdn.com/dms/image/v2/C560BAQGqjUBpi-gfDw/company-logo_100_100/company-logo_100_100/0/1646646209347?e=2147483647&v=beta&t=aRlHjG1SXW1GF3-aTV-1PMe4Z2gWjjdrrXQYOAmxA7E",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 31,
+          "Job Title": "Full-Stack Developer",
+          "Company": "Dsquares",
+          "Location": "القاهرة القاهرة مصر",
+          "Date Job": "قبل ١شهر",
+          "Logo": "https://media.licdn.com/dms/image/v2/D560BAQEm1NQlevhvNg/company-logo_100_100/company-logo_100_100/0/1731430430811?e=2147483647&v=beta&t=oMU7gtRMhILAPL8eiGEg3JyJsw7WfMo2KwrW_ZC2OQo",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 32,
+          "Job Title": "Frontend Software Engineer (Angular)",
+          "Company": "Money Fellows",
+          "Location": "القاهرة القاهرة مصر",
+          "Date Job": "قبل ٣ أيام",
+          "Logo": "https://media.licdn.com/dms/image/v2/C4D0BAQGD3otvaD7ByA/company-logo_100_100/company-logo_100_100/0/1674402131314/moneyfellows_logo?e=2147483647&v=beta&t=zI4mWZPdzcszkDBUkH8y4EWa2zBd4kI96n5Ahg74Qyc",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 33,
+          "Job Title": "Junior Front-End Developer (Part-Time, Project-Based)",
+          "Company": "IOR Africa",
+          "Location": "القاهرة مصر",
+          "Date Job": "N/A",
+          "Logo": "https://media.licdn.com/dms/image/v2/C4D0BAQFumTci_Okjbg/company-logo_100_100/company-logo_100_100/0/1630528710769?e=2147483647&v=beta&t=ocPHEV7oP77v3Wkm0HvKgfdgTL9TZ0Yz0xIRfWCcTZw",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 34,
+          "Job Title": "Mid Frontend Developer",
+          "Company": "BlackStone eIT",
+          "Location": "القاهرة القاهرة مصر",
+          "Date Job": "قبل ١شهر",
+          "Logo": "https://media.licdn.com/dms/image/v2/D560BAQHkHA7g69T6cQ/company-logo_100_100/company-logo_100_100/0/1706778828270/blackstoneeit_logo?e=2147483647&v=beta&t=C0JcOjTH4Zl4BVHtfpHn48q1ssbt5VMjc1_xy3Zv79I",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 35,
+          "Job Title": "Frontend Software Developer (Angular)",
+          "Company": "Advansys",
+          "Location": "القاهرة السادس من أكتوبر مصر",
+          "Date Job": "قبل ١شهر",
+          "Logo": "https://media.licdn.com/dms/image/v2/D4D0BAQHJMseSnXrxAQ/company-logo_100_100/company-logo_100_100/0/1732219032679/advansys_esc_logo?e=2147483647&v=beta&t=tstVlPhUEWgCa-7W85J_l9lrvxN0yNv7LU0lRjYe_G0",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 36,
+          "Job Title": "Deloitte Innovation Hub | Full Stack Engineer, Cairo, Egypt",
+          "Company": "Deloitte",
+          "Location": "القاهرة القاهرة مصر",
+          "Date Job": "قبل ٥ أيام",
+          "Logo": "https://media.licdn.com/dms/image/v2/C560BAQGNtpblgQpJoQ/company-logo_100_100/company-logo_100_100/0/1662120928214/deloitte_logo?e=2147483647&v=beta&t=OSF8M5LreT0Sf2F-JcNk6XMT0ArCuPfDmRR-knCC4HY",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 37,
+          "Job Title": "Mid/Senior Frontend Developer",
+          "Company": "Inovola",
+          "Location": "القاهرة القاهرة مصر",
+          "Date Job": "قبل ٢ أسبوع",
+          "Logo": "https://media.licdn.com/dms/image/v2/D4D0BAQFGUZUgJfzQZA/company-logo_100_100/company-logo_100_100/0/1699218633232/inovola_logo?e=2147483647&v=beta&t=ATbbwKPGKZgnohLm77U0VkufR3bDyqzgrN30UZl2lds",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 38,
+          "Job Title": "Full-Stack Software Engineer (Angular and Java)",
+          "Company": "WorkFlex",
+          "Location": "مصر",
+          "Date Job": "قبل ١ أسبوع",
+          "Logo": "https://media.licdn.com/dms/image/v2/C4E0BAQG1AAJ_QKd-fQ/company-logo_100_100/company-logo_100_100/0/1673246227871/getworkflex_logo?e=2147483647&v=beta&t=KSg869NCU8rRwvuuD-OknhF_ApaG2_Ka4RT-bxFx-Gk",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 39,
+          "Job Title": "Frontend Developer",
+          "Company": "Keys Recruiters",
+          "Location": "القاهرة مصر",
+          "Date Job": "N/A",
+          "Logo": "https://media.licdn.com/dms/image/v2/D4E0BAQEsfpjXEVGrYw/company-logo_100_100/company-logo_100_100/0/1710153376776/keys_hr_recruitment_llc_logo?e=2147483647&v=beta&t=IxPeVsb-3ZnsSVhG37Yo9RbWO3G66UZbrstUyOc7Iqk",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 40,
+          "Job Title": "Frontend / Full stack Engineer (f/m/d) - Team Growth - Egypt",
+          "Company": "Pet Media Group (PMG)",
+          "Location": "القاهرة القاهرة مصر",
+          "Date Job": "قبل ١ أسبوع",
+          "Logo": "https://media.licdn.com/dms/image/v2/C4E0BAQE5zp7JkDRDJg/company-logo_100_100/company-logo_100_100/0/1673705681721/pet_media_group_logo?e=2147483647&v=beta&t=5sKm3bveE_UiWvuRFse9diCY9ZUw0YAiv2Gf2lePkyk",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 41,
+          "Job Title": "Full Stack Developer",
+          "Company": "باكسيرا هيلث",
+          "Location": "الجيزة قسم ثان 6 اكتوبر مصر",
+          "Date Job": "قبل ٢شهر",
+          "Logo": "https://media.licdn.com/dms/image/v2/D4E0BAQGNe7ACuzLupw/company-logo_100_100/company-logo_100_100/0/1731432796279/paxerahealthcorp_logo?e=2147483647&v=beta&t=_kEjuLfziNHEeKJm9gHSJPWE0K1g3DRcaXmqlUzkJS4",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 42,
+          "Job Title": "Intermediate Frontend Developer",
+          "Company": "SSC HR Solutions",
+          "Location": "القاهرة القاهرة مصر",
+          "Date Job": "قبل ٦ أيام",
+          "Logo": "https://media.licdn.com/dms/image/v2/D4D0BAQHpHEWgEkCKGA/company-logo_100_100/B4DZVHGyhTHkAU-/0/1740654719424/ssc_egypt_logo?e=2147483647&v=beta&t=5W7C6GQ699kB0nxRzKg5voc5cRuokdUA5KpHadxAvmw",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 43,
+          "Job Title": "Sr. Web Developer (PHP)",
+          "Company": "Misr Technology Services",
+          "Location": "القاهرة مصر الجديدة مصر",
+          "Date Job": "قبل ٣شهر",
+          "Logo": "https://media.licdn.com/dms/image/v2/C560BAQFkA6MHWKCclg/company-logo_100_100/company-logo_100_100/0/1631332941323?e=2147483647&v=beta&t=GdFLqIL1QHVdP2-0yL9jT8dTM7AAZQ44SVcG_DILoVU",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 44,
+          "Job Title": "Full-Stack Developer (Arabic & English Speaker)",
+          "Company": "SWATX",
+          "Location": "القاهرة القاهرة مصر",
+          "Date Job": "قبل ١شهر",
+          "Logo": "https://media.licdn.com/dms/image/v2/D560BAQHWugk4yqxbOA/company-logo_100_100/company-logo_100_100/0/1719256637482?e=2147483647&v=beta&t=ht0JfC2BE1qe_5NbrUCUWihYl4_sxodW9GgexPNH_bo",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 45,
+          "Job Title": "Full Stack Developer",
+          "Company": "Job Solutions",
+          "Location": "مصر",
+          "Date Job": "قبل ١ أسبوع",
+          "Logo": "https://media.licdn.com/dms/image/v2/D4D0BAQFvYvHA5Ncz5Q/company-logo_100_100/company-logo_100_100/0/1707146828199/jobsolutionsme_logo?e=2147483647&v=beta&t=kT79RATbzbwS_NDsUrMmhAyzpAyCrKWB7VU7GEIduY0",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 46,
+          "Job Title": "Full-Stack Web Developer",
+          "Company": "Palm Outsourcing",
+          "Location": "مصر",
+          "Date Job": "N/A",
+          "Logo": "https://media.licdn.com/dms/image/v2/D4E0BAQH43VLACw_sqw/company-logo_100_100/company-logo_100_100/0/1703605844988/palm_outsourcing_logo?e=2147483647&v=beta&t=_Z-SMXBeM4FUPGGPgh5BHMNzhN4KMjOVT_Wh6_9vXMw",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 47,
+          "Job Title": "Web Frontend Engineer - JS, CSS, React, Flutter",
+          "Company": "Canonical",
+          "Location": "القاهرة القاهرة مصر",
+          "Date Job": "قبل ٣ أسبوع",
+          "Logo": "https://media.licdn.com/dms/image/v2/C560BAQEbIYAkAURcYw/company-logo_100_100/company-logo_100_100/0/1650566107463/canonical_logo?e=2147483647&v=beta&t=17jhZvUOD-0vAJw3nIGnkBiYtBbXfEriIhIo6TfDmzc",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 48,
+          "Job Title": "Web Frontend Engineer - JS, CSS, React, Flutter",
+          "Company": "Canonical",
+          "Location": "القاهرة القاهرة مصر",
+          "Date Job": "قبل ٣ أسبوع",
+          "Logo": "https://media.licdn.com/dms/image/v2/C560BAQEbIYAkAURcYw/company-logo_100_100/company-logo_100_100/0/1650566107463/canonical_logo?e=2147483647&v=beta&t=17jhZvUOD-0vAJw3nIGnkBiYtBbXfEriIhIo6TfDmzc",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 49,
+          "Job Title": "Fullstack Developer - BaniSueif",
+          "Company": "Classera",
+          "Location": "القاهرة القاهرة مصر",
+          "Date Job": "قبل ٢ أسبوع",
+          "Logo": "https://media.licdn.com/dms/image/v2/C4D0BAQGpI0Jy_S9YeQ/company-logo_100_100/company-logo_100_100/0/1630509658642/classera_inc__logo?e=2147483647&v=beta&t=CwRWknBnxshJEPERtW5fD12prc1LVR8f0Idp8j_OMkU",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 50,
+          "Job Title": "Frontend Developer Angular ( Mid/Junior)",
+          "Company": "BlackStone eIT",
+          "Location": "القاهرة مدينه نصر مصر",
+          "Date Job": "قبل ١شهر",
+          "Logo": "https://media.licdn.com/dms/image/v2/D560BAQHkHA7g69T6cQ/company-logo_100_100/company-logo_100_100/0/1706778828270/blackstoneeit_logo?e=2147483647&v=beta&t=C0JcOjTH4Zl4BVHtfpHn48q1ssbt5VMjc1_xy3Zv79I",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 51,
+          "Job Title": "Full-stack Javascript Developer",
+          "Company": "Palm Outsourcing",
+          "Location": "مصر",
+          "Date Job": "قبل ٣ أيام",
+          "Logo": "https://media.licdn.com/dms/image/v2/D4E0BAQH43VLACw_sqw/company-logo_100_100/company-logo_100_100/0/1703605844988/palm_outsourcing_logo?e=2147483647&v=beta&t=_Z-SMXBeM4FUPGGPgh5BHMNzhN4KMjOVT_Wh6_9vXMw",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 52,
+          "Job Title": "Senior Frontend Developer (Spartacus)",
+          "Company": "Coca-Cola HBC",
+          "Location": "القاهرة مصر",
+          "Date Job": "قبل ٥ أيام",
+          "Logo": "https://media.licdn.com/dms/image/v2/D4E0BAQHxN8CVWRrugw/company-logo_100_100/B4EZUUZqwfHgAU-/0/1739804028556/coca_cola_hbc_logo?e=2147483647&v=beta&t=KjPBXQe6ez_1_jVIaHB16CjTfaNyt3FIn4MwBg4Hk7c",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 53,
+          "Job Title": "Full Stack Developer - Octopus by RTG",
+          "Company": "Robusta Studio",
+          "Location": "القاهرة القاهرة مصر",
+          "Date Job": "قبل ١شهر",
+          "Logo": "https://media.licdn.com/dms/image/v2/C4D0BAQF0WIMp7TQXfw/company-logo_100_100/company-logo_100_100/0/1678028986307/robusta_studio_logo?e=2147483647&v=beta&t=u19_La3Qyxfh8NjE_UIHp5WzeXXKa_iASD_KNMN3lro",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 54,
+          "Job Title": "Frontend Engineer - 6 months contract (Mainly in React) Immediate",
+          "Company": "Robusta Studio",
+          "Location": "القاهرة القاهرة مصر",
+          "Date Job": "قبل ٥ أيام",
+          "Logo": "https://media.licdn.com/dms/image/v2/C4D0BAQF0WIMp7TQXfw/company-logo_100_100/company-logo_100_100/0/1678028986307/robusta_studio_logo?e=2147483647&v=beta&t=u19_La3Qyxfh8NjE_UIHp5WzeXXKa_iASD_KNMN3lro",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 55,
+          "Job Title": "Full Stack Developer",
+          "Company": "Quickstor",
+          "Location": "القاهرة مصر",
+          "Date Job": "قبل ٣ أيام",
+          "Logo": "https://media.licdn.com/dms/image/v2/D4D0BAQFejER94FPcWw/company-logo_100_100/B4DZa.yIcFHAAQ-/0/1746957535717/quickstor_logo?e=2147483647&v=beta&t=Z1rjmoqGHqHwFd_hFAMM5zjYeaxGiG0Mn848J8cosI8",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 56,
+          "Job Title": "Full Stack software Engineer",
+          "Company": "Palm Outsourcing",
+          "Location": "مصر",
+          "Date Job": "قبل ٦ أيام",
+          "Logo": "https://media.licdn.com/dms/image/v2/D4E0BAQH43VLACw_sqw/company-logo_100_100/company-logo_100_100/0/1703605844988/palm_outsourcing_logo?e=2147483647&v=beta&t=_Z-SMXBeM4FUPGGPgh5BHMNzhN4KMjOVT_Wh6_9vXMw",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 57,
+          "Job Title": "Fullstack Developer (.Net & React)",
+          "Company": "BlackStone eIT",
+          "Location": "مصر",
+          "Date Job": "قبل ١شهر",
+          "Logo": "https://media.licdn.com/dms/image/v2/D560BAQHkHA7g69T6cQ/company-logo_100_100/company-logo_100_100/0/1706778828270/blackstoneeit_logo?e=2147483647&v=beta&t=C0JcOjTH4Zl4BVHtfpHn48q1ssbt5VMjc1_xy3Zv79I",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 58,
+          "Job Title": "Mid FullStack Developer",
+          "Company": "Advansys",
+          "Location": "القاهرة مدينه نصر مصر",
+          "Date Job": "قبل ١شهر",
+          "Logo": "https://media.licdn.com/dms/image/v2/D4D0BAQHJMseSnXrxAQ/company-logo_100_100/company-logo_100_100/0/1732219032679/advansys_esc_logo?e=2147483647&v=beta&t=tstVlPhUEWgCa-7W85J_l9lrvxN0yNv7LU0lRjYe_G0",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 59,
+          "Job Title": "Front-end Developer(Angular)",
+          "Company": "BlackStone eIT",
+          "Location": "القاهرة القاهرة مصر",
+          "Date Job": "قبل ١شهر",
+          "Logo": "https://media.licdn.com/dms/image/v2/D560BAQHkHA7g69T6cQ/company-logo_100_100/company-logo_100_100/0/1706778828270/blackstoneeit_logo?e=2147483647&v=beta&t=C0JcOjTH4Zl4BVHtfpHn48q1ssbt5VMjc1_xy3Zv79I",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     },
+     {
+          "id": 60,
+          "Job Title": "Senior Full-Stack Engineer (.NET Core & Angular)",
+          "Company": "Halan - حالا",
+          "Location": "القاهرة القاهرة مصر",
+          "Date Job": "قبل ٣شهر",
+          "Logo": "https://media.licdn.com/dms/image/v2/C4D0BAQFbuWv3FALCrQ/company-logo_100_100/company-logo_100_100/0/1656944631977/halan_logo?e=2147483647&v=beta&t=BM1zjxKD0S9jyDzjf4oMp52O8uMC1DKHCl8g6gqHLfg",
+          "url": "https://eg.linkedin.com/jobs/search?keywords=web developer&location=egypt"
+     }
+]

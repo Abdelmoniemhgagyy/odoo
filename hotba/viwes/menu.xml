@@ -1,0 +1,6 @@
+<odoo>
+    <menuitem name="Hotbas"  id="hotba_menu_root"/>
+    <menuitem name="Hotba" id="hotba" parent="hotba_menu_root" action="act_view_hotba"/>
+    <menuitem name="Shahik" id="shahik" parent="hotba_menu_root" action="act_view_shahik"/>
+
+</odoo>

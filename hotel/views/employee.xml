@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- تعريف طريقة عرض القائمة -->
+    <record model="ir.ui.view" id="hotel_employee_list">
+        <field name="name">hotel.employee.list</field>
+        <field name="model">hotel.employee</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="age"/>
+                <field name="salary"/>
+                <field name="employee_bouns"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- تعريف طريقة عرض الفورم -->
+    <record model="ir.ui.view" id="hotel_employee_form">
+        <field name="name">hotel.employee.form</field>
+        <field name="model">hotel.employee</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title">
+                         <h1>
+                             <field name="employee_id"/>
+                         </h1>
+                    </div>
+                   <group>
+                    <field name="name"/>
+                   </group>
+                   <group>
+                        <field name="age"/>
+                        <field name="salary" />
+                       <field name="employee_bouns"/>
+                   </group>
+                    <group>
+                    <field name="employee_reservation_count"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- تعريف الإجراء (Action) -->
+    <record model="ir.actions.act_window" id="hotel_employee_action_window">
+        <field name="name">Hotel Employee</field>
+        <field name="res_model">hotel.employee</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="hotel_employee_list"/>
+    </record>
+
+</odoo>

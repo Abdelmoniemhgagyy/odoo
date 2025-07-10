@@ -1,0 +1,42 @@
+<odoo>
+    <record model="ir.actions.act_window" id="action_web_scraped">
+            <field name="name">Web Scraped</field>
+            <field name="res_model">scraped.job</field>
+            <field name="view_mode">tree,form,kanban</field>
+            <field name="view_id" eval="False"/>
+    </record>
+    <record model="ir.ui.view" id="web_scraped_form">
+        <field name="name">web scraped form</field>
+        <field name="model">scraped.job</field>
+        <field name="arch" type="xml">
+            <form>
+             <sheet>
+                 <group>
+                     <field name="name"/>
+                     <field name="company_name"/>
+                     <field name="location"/>
+                     <field name="status"/>
+                     <field name="date_posted"/>
+                 </group>
+             </sheet>
+            </form>
+        </field>
+    </record>
+     <record model="ir.ui.view" id="web_scraped_tree">
+        <field name="name">web_scraped tree</field>
+        <field name="model">scraped.job</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="company_name"/>
+                <field name="location"/>
+                <field name="status"/>
+                <field name="date_posted"/>
+            </tree>
+        </field>
+    </record>
+
+
+
+
+</odoo>

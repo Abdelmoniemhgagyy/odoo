@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- تعريف طريقة عرض القائمة -->
+    <record model="ir.ui.view" id="hotel_customer_list">
+        <field name="name">hotel.customer.list</field>
+        <field name="model">hotel.customer</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="national_id"/>
+                 <field name="total_price_food"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- تعريف طريقة عرض الفورم -->
+    <record model="ir.ui.view" id="hotel_customer_form">
+        <field name="name">hotel.customer.form</field>
+        <field name="model">hotel.customer</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title">
+                         <h1>
+                             <field name="customer_no"/>
+                         </h1>
+                    </div>
+                <group>
+                    <field name="name"/>
+                </group>
+                <group>
+                    <field name="national_id"/>
+                </group>
+                    <group>
+                        <field name="total_price"/>
+                    </group>
+                    <notebook>
+                    <page string="Employee ID">
+                        <group>
+                            <field name="employee_id"/>
+                        </group>
+                    </page>
+                        <page string="Reservations">
+                                    <field name="reserve_ids">
+                                        <tree>
+                                            <field name="reserve_no"/>
+                                            <field name="customer_no"/>
+                                            <field name="date_st"/>
+                                            <field name="date_en"/>
+                                            <field name="stay_days"/>
+                                            <field name="price_stay"/>
+                                        </tree>
+                                    </field>
+                            <group>
+                                <field name="total_price_reservation"/>
+                            </group>
+                        </page>
+                        <page string="Foods">
+                            <field name="food_ids"/>
+                            <group>
+                                <field name="total_price_food"/>
+                            </group>
+                        </page>
+                </notebook>
+                </sheet>
+
+            </form>
+        </field>
+    </record>
+
+    <!-- تعريف الإجراء (Action) -->
+    <record model="ir.actions.act_window" id="hotel_customer_action_window">
+        <field name="name">Hotel Customer</field>
+        <field name="res_model">hotel.customer</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="hotel_customer_list"/>
+    </record>
+</odoo>

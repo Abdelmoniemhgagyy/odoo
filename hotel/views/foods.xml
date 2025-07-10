@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- تعريف طريقة عرض القائمة -->
+    <record model="ir.ui.view" id="hotel_foods_list">
+        <field name="name">hotel.foods.list</field>
+        <field name="model">hotel.foods</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="food_id"/>
+                <field name="food_name"/>
+                <field name="price"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- تعريف طريقة عرض الفورم -->
+    <record model="ir.ui.view" id="hotel_foods_form">
+        <field name="name">hotel.foods.form</field>
+        <field name="model">hotel.foods</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title">
+                         <h1>
+                             <field name="food_id"/>
+                         </h1>
+                    </div>
+                <group>
+                    <field name="food_name"/>
+                    <field name="price" />
+                </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- تعريف الإجراء (Action) -->
+    <record model="ir.actions.act_window" id="hotel_foods_action_window">
+        <field name="name">Hotel foods</field>
+        <field name="res_model">hotel.foods</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="hotel_foods_list"/>
+    </record>
+
+</odoo>

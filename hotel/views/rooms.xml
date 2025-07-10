@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="hotel_rooms_list">
+        <field name="name">hotel.rooms.list</field>
+        <field name="model">hotel.rooms</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field  name="room_no" />
+                <field name="reserve_no"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- تعريف طريقة عرض الفورم -->
+    <record model="ir.ui.view" id="hotel_rooms_form">
+        <field name="name">hotel.rooms.form</field>
+        <field name="model">hotel.rooms</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                <group>
+                    <group>
+                        <field name="room_no"/>
+                        <field name="reserve_no"/>
+                    </group>
+                </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- تعريف الإجراء (Action) -->
+    <record model="ir.actions.act_window" id="hotel_rooms_action_window">
+        <field name="name">Hotel rooms</field>
+        <field name="res_model">hotel.rooms</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="hotel_rooms_list"/>
+    </record>
+</odoo>

@@ -1,0 +1,127 @@
+<odoo>
+    <record model="ir.actions.act_window" id="action_open_appointment">
+        <field name="name">Appointment</field>
+        <field name="res_model">hospital.appointment</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('doctor_id','=',active_id)]</field>
+        <field name="context">{'default_doctor_id':active_id}</field>
+    </record>
+    <record model="ir.ui.view" id="view_hospital_doctor_form">
+        <field name="name">Hospital Doctor</field>
+        <field name="model">hospital.doctor</field>
+        <field name="arch" type="xml">
+            <form string="Hospital Doctor" >
+                <sheet>
+                    <widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
+                     <div class="oe_button_box" name="button_box">
+                            <button name="%(om_hospital.action_open_appointment)d" type="action"
+                                class="oe_stat_button" icon="fa-calendar">
+                                <div class="o_stat_info">
+                                    <field name="appointment_count" class="o_stat_value"/>
+                                    <span class="o_stat_text">Appointments</span>
+                                </div>
+                            </button>
+                    </div>
+                <field widget="image" name="doctor_image" class="oe_avatar"  />
+                    <group>
+                        <group>
+                            <field name="doctor_name"/>
+                            <field name="age"/>
+                        </group>
+                        <group>
+                            <field name="note"/>
+                            <field name="active" invisible="1"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="view_hospital_doctor_tree">
+        <field name="name">Hospital doctor Tree</field>
+        <field name="model">hospital.doctor</field>
+        <field name="arch" type="xml">
+            <tree sample="1">
+                <field name="doctor_name"/>
+                <field name="gender"/>
+                <field name="age"/>
+                <field name="note"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="hospital_doctor_action">
+        <field name="name">Hospital doctor</field>
+        <field name="res_model">hospital.doctor</field>
+        <field name="view_mode">tree,form,kanban</field>
+<!--        <field name="context">{"search_default_gender":1}</field>-->
+    </record>
+<!--    kanban view -->
+            <record id="view_doctor_kanban" model="ir.ui.view">
+            <field name="name">hospital.doctor.kanban</field>
+            <field name="model">hospital.doctor</field>
+            <field name="arch" type="xml">
+                <kanban>
+                <field name="doctor_name"/>
+                <field name="gender"/>
+                <field name="age"/>
+                <field name="note"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_global_click">
+                                <div class="row">
+                                    <div  class="col-6 text-center">
+                                        <strong>Name:</strong>
+                                        <field name="doctor_name"/>
+                                    </div>
+                                    <div  class="col-6 text-center">
+                                        <strong>Gender : </strong>
+                                        <field name="gender"/>
+                                    </div>
+                                    <div  class="col-6 text-center">
+                                        <strong>Note : </strong>
+                                        <field name="note"/>
+                                    </div>
+                                    <div  class="col-6 text-center">
+                                        <strong>Age : </strong>
+                                        <field name="age"/>
+
+                                    </div>
+                                </div>
+                                <hr class="mt4 mb4"/>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+<!--    End kanban view -->
+<!--search model -->
+    <record id="view_doctor_search" model="ir.ui.view">
+        <field name="model">hospital.doctor</field>
+        <field name="arch" type="xml">
+            <search string="Hospital doctor">
+<!--                <field name="name" filter_domain="['|', ('name','ilike',self), ('model','ilike',self)]" string="Model"/>-->
+                <field name="doctor_name"/>
+                <field name="note"/>
+                <separator/>
+                <filter string="Archived" name="archived" domain="[('active', '=', False)]"/>
+                <separator/>
+                <filter  string="Gender" name="gender_filter" domain="[('gender', '=', 'male')]"/>                <separator/>
+                <group>
+                <filter  name="gender" string="Gender" domain="[]" context="{'group_by':'gender'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+<!--End search model -->
+
+    <menuitem name="doctors" id="menu_hospital_doctors_root" parent="menu_hospital_root" action="hospital_doctor_action"/>
+</odoo>
+

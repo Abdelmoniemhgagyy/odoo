@@ -1,0 +1,187 @@
+<odoo>
+
+    <record id="action_confirm_appointment_btn_actions" model="ir.actions.server">
+            <field name="name">Confirm Appointment</field>
+            <field name="type">ir.actions.server</field>
+            <field name="model_id" ref="model_hospital_appointment" />
+            <field name="binding_model_id" ref="model_hospital_appointment" />
+            <field name="state">code</field>
+            <field name="code">records.action_confirm()</field>
+    </record>
+
+    <record model="ir.ui.view" id="view_hospital_Appointment_form">
+        <field name="name">Hospital Appointment</field>
+        <field name="model">hospital.appointment</field>
+        <field name="arch" type="xml">
+            <form string="Hospital Appointment">
+                <header>
+                    <button id="button_draft" name="action_draft" string="Draft" states="cancel" class="btn-primary" type="object"/>
+                    <button id="button_confirm" name="action_confirm"  string="Confirm" states="draft" class="btn-primary" type="object"/>
+                    <button id="button_done" name="action_done"  string="Go To Done" states="confirm" class="btn-primary" type="object"/>
+                    <button id="button_cancel" name="action_cancel" confirm="are you sure ?"  string="Cancel" states="draft,confirm,done" class="btn-danger" type="object"/>
+                    <button name="action_url" string="Open My Website" class="btn-success" type="object"/>
+                    <field name="state" widget="statusbar"
+                    statusbar_visible="draft,confirm,done"/>
+<!--                    <field name="state" widget="statusbar" options="{'clickable':'1'}"/>-->
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="reference" readonly="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+
+                            <field name="patient_id" options="{'no_create': True}"/>
+                            <field name="patient_name_id" context="{'hide_code':True}"/>
+                            <field name="gender" readonly="1" force_save="1"/>
+                            <field name="age"/>
+                            <field name="date_appointment"/>
+                        </group>
+                        <group>
+                            <field name="doctor_id" options="{'no_open':True,'no_create_edit': True}"/>
+                            <field name="note"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Prescription Page">
+                            <group>
+                                <field name="prescription" string="Prescription"/>
+                            </group>
+                        </page>
+                        <page string="Medicine Page">
+                                <field name="prescription_lines_ids" >
+                                    <tree editable="top">
+                                        <field name="name"/>
+                                        <field name="qyt"/>
+                                    </tree>
+                                    <form>
+                                        <group>
+                                            <field name="name"/>
+                                        </group>
+                                        <group>
+                                            <field name="qyt"/>
+                                        </group>
+                                    </form>
+                                </field>
+                        </page>
+                        <page string="Description Page">
+                            <group>
+                                <field name="note"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="view_hospital_Appointment_tree">
+        <field name="name">Hospital Appointment Tree</field>
+        <field name="model">hospital.appointment</field>
+        <field name="arch" type="xml">
+            <tree multi_edit="1">
+                <header>
+                    <button name="action_done"  string="Go To Done" class="btn-primary" type="object"/>
+                </header>
+                <field name="reference"/>
+                <field name="patient_id"/>
+                <field name="age" optional="show"/>
+                <field name="gender" optional="show"/>
+                <field name="date_appointment" optional="show"/>
+                <field name="note" optional="hide"/>
+                <field name="state" optional="hide"/>
+            </tree>
+
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="hospital_appointment_action">
+        <field name="name">Hospital Appointment</field>
+        <field name="res_model">hospital.appointment</field>
+        <field name="view_mode">tree,form,kanban</field>
+    </record>
+
+<!--    kanban view -->
+            <record id="view_Appointment_kanban" model="ir.ui.view">
+            <field name="name">hospital.appointment.kanban</field>
+            <field name="model">hospital.appointment</field>
+            <field name="arch" type="xml">
+                <kanban default_order="id asc">
+
+                    <field name="age"/>
+                    <field name="gender"/>
+                    <field name="date_appointment"/>
+                    <field name="note"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_global_click">
+                                <div class="row">
+                                    <div  class="col-6 text-center">
+                                        <strong>Name:</strong>
+                                        <field name="patient_id"/>
+                                    </div>
+                                    <div  class="col-6 text-center">
+                                        <strong>Note : </strong>
+                                        <field name="note"/>
+                                    </div>
+                                    <div  class="col-6 text-center">
+                                        <strong>Age : </strong>
+                                        <field name="age"/>
+                                    </div>
+                                    <div  class="col-6 text-center">
+                                        <strong>Gender: </strong>
+                                       <field name="gender"/>
+                                    </div>
+                                    <div  class="col-6 text-center">
+                                        <strong>Date : </strong>
+                                        <field name="date_appointment"/>
+                                    </div>
+                                </div>
+                                <hr class="mt4 mb4"/>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+<!--    End kanban view -->
+<!--search model -->
+    <record id="view_Appointment_search" model="ir.ui.view">
+        <field name="model">hospital.appointment</field>
+        <field name="arch" type="xml">
+            <search string="Hospital Appointment">
+<!--                <field name="patient_id" filter_domain="['|', ('name','ilike',self), ('model','ilike',self)]" string="Model"/>-->
+                <field name="patient_id"/>
+                <field name="note"/>
+                <separator/>
+            </search>
+        </field>
+    </record>
+<!--End search model -->
+
+    <menuitem name="Appointments" id="menu_hospital_Appointments_root"
+              parent="menu_hospital_root" />
+    <menuitem name="Reporting" id="menu_wizard_appointments"
+              parent="menu_hospital_root" />
+    <menuitem name="Patient Wizard Report " id="menu_wizard_appointment"
+              parent="menu_wizard_appointments" action="actions_appointment_wizard_report" />
+    <menuitem name="Patient Wizard Report By Func" id="menu_wizard_appointment_fun"
+              parent="menu_wizard_appointments" action="actions_appointment_wizard_func_report" />
+    
+    <menuitem name="Appointment"
+              id="menu_hospital_Appointments"
+              parent="menu_hospital_Appointments_root"
+              action="hospital_appointment_action"/>
+    <menuitem name="Create Appointments"
+          id="menu_create_Appointment"
+          parent="menu_hospital_Appointments_root"
+          action="create_appointment_action"/>
+
+</odoo>

@@ -1,0 +1,13 @@
+<odoo>
+    <record model="ir.actions.act_window" id="action_gym_members_male">
+            <field name="name">Gym</field>
+            <field name="res_model">gym.members</field>
+            <field name="view_mode">tree,form,kanban</field>
+            <field name="domain">[('gender','=','male')]</field>
+            <field name="view_id" eval="False"/>
+    </record>
+
+<menuitem name="Male" sequence="1" id="gym_male_members_menu" parent="gym_members_menu" action="action_gym_members_male" />
+
+
+</odoo>
