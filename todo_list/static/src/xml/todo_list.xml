@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+  <t t-name="todo_list.TodoListView">
+    <div class="todo-container">
+      <!-- Header -->
+        <div class="todo-header">
+        <div class="d-flex gap-2">
+          <input type="text" t-model="state.name" class="form-control todo-input"
+                 placeholder="Search tasks..." aria-label="search" data-action="search"/>
+
+            <t t-if="this.state.is_edit">
+            <button t-on-click="updateTask" class="btn todo-btn-primary" type="button">Update</button>
+                <button t-on-click="resetTask" class="btn todo-btn-danger" type="button">Cancel</button>
+          </t>
+            <t t-else="">
+            <button t-on-click="createTask" class="btn todo-btn-primary"
+                    type="button" data-action="add">+ Add Task</button>
+          </t>
+        </div>
+      </div>
+
+        <!-- Summary & Filters -->
+        <div class="todo-summary">
+            <div class="text-muted">
+          <span t-esc="state.records.length"/>
+            tasks
+        </div>
+            <div>
+            <button
+                    t-on-click="()=> { this.state.is_complete = false; this.viewlist(); }"
+                    t-att-class="'btn btn-sm todo-btn-filter ' + (this.state.is_complete ? '' : 'active')"
+                    type="button">
+              All
+            </button>
+
+                <button
+                        t-on-click="()=> { this.state.is_complete = true; this.viewlist(); }"
+                        t-att-class="'btn btn-sm todo-btn-filter ' + (this.state.is_complete ? 'active' : '') + ' ms-2'"
+                        type="button">
+              Completed
+            </button>
+
+
+
+            </div>
+        </div>
+
+        <!-- Tasks Grid -->
+        <div class="row g-3">
+        <t t-foreach="state.records" t-as="rec" t-key="rec.id">
+          <div class="col-12">
+            <div class="todo-card">
+              <div style="padding: 5px 10px;" class="card-body d-flex align-items-center justify-content-between">
+
+                <!-- Task Content -->
+                  <div class="d-flex align-items-center">
+                  <div class="me-3">
+                    <input class="form-check-input todo-checkbox" type="checkbox"
+                           t-att-checked="rec.is_done"
+                           t-on-click="() => this.toggleTask(rec)"
+                           aria-label="done"/>
+                  </div>
+                      <div class="todo-text">
+                    <t t-esc="rec.name"/>
+                  </div>
+                </div>
+
+                  <!-- Action Buttons -->
+                  <div class="d-flex align-items-center gap-2">
+                  <button t-on-click="()=>this.editTask(rec)"
+                          class="btn btn-sm todo-btn-outline-primary"
+                          type="button" data-action="edit" title="Edit">✏️</button>
+                      <button t-on-click="()=>deleteTask(rec.id)"
+                              class="btn btn-sm todo-btn-outline-danger"
+                              type="button" data-action="delete" title="Delete">🗑</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </t>
+      </div>
+
+        <!-- Empty state -->
+        <t t-if="!state.records || !state.records.length">
+        <div class="todo-empty">
+          No tasks yet — click "+ Add Task" to create your first one 🚀
+        </div>
+      </t>
+    </div>
+  </t>
+</templates>
+
