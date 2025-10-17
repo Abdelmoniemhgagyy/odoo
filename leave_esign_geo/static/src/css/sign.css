@@ -1,0 +1,177 @@
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('✓ Script loaded');
+    
+    const canvas = document.getElementById('signature-pad');
+    console.log('Canvas:', canvas);
+    
+    if (!canvas) {
+        console.error('❌ Canvas not found!');
+        return;
+    }
+    
+    const ctx = canvas.getContext('2d');
+    if (!ctx) {
+        console.error('❌ Cannot get 2D context');
+        return;
+    }
+    
+    // إعدادات الرسم
+    ctx.strokeStyle = '#000000';
+    ctx.lineWidth = 3;
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'round';
+    
+    let isDrawing = false;
+    
+    // دالة لحساب موقع الماوس بشكل صحيح
+    function getMousePos(e) {
+        const rect = canvas.getBoundingClientRect();
+        const scaleX = canvas.width / rect.width;
+        const scaleY = canvas.height / rect.height;
+        return {
+            x: (e.clientX - rect.left) * scaleX,
+            y: (e.clientY - rect.top) * scaleY
+        };
+    }
+    
+    // Mouse Down
+    canvas.addEventListener('mousedown', function(e) {
+        console.log('Mouse down');
+        isDrawing = true;
+        const pos = getMousePos(e);
+        ctx.beginPath();
+        ctx.moveTo(pos.x, pos.y);
+    });
+    
+    // Mouse Move
+    canvas.addEventListener('mousemove', function(e) {
+        if (!isDrawing) return;
+        const pos = getMousePos(e);
+        ctx.lineTo(pos.x, pos.y);
+        ctx.stroke();
+    });
+    
+    // Mouse Up
+    canvas.addEventListener('mouseup', function(e) {
+        console.log('Mouse up');
+        isDrawing = false;
+        ctx.closePath();
+    });
+    
+    // Mouse Leave
+    canvas.addEventListener('mouseleave', function(e) {
+        if (isDrawing) {
+            isDrawing = false;
+            ctx.closePath();
+        }
+    });
+    
+    // Touch support
+    canvas.addEventListener('touchstart', function(e) {
+        e.preventDefault();
+        const touch = e.touches[0];
+        const mouseEvent = new MouseEvent('mousedown', {
+            clientX: touch.clientX,
+            clientY: touch.clientY
+        });
+        canvas.dispatchEvent(mouseEvent);
+    });
+    
+    canvas.addEventListener('touchmove', function(e) {
+        e.preventDefault();
+        const touch = e.touches[0];
+        const mouseEvent = new MouseEvent('mousemove', {
+            clientX: touch.clientX,
+            clientY: touch.clientY
+        });
+        canvas.dispatchEvent(mouseEvent);
+    });
+    
+    canvas.addEventListener('touchend', function(e) {
+        e.preventDefault();
+        const mouseEvent = new MouseEvent('mouseup', {});
+        canvas.dispatchEvent(mouseEvent);
+    });
+    
+    // Clear Button
+    const clearBtn = document.getElementById('clear-sign');
+    if (clearBtn) {
+        clearBtn.addEventListener('click', function() {
+            console.log('Clear clicked');
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        });
+    }
+    
+    // Submit Button
+    const submitBtn = document.getElementById('submit-sign');
+    if (submitBtn) {
+        submitBtn.addEventListener('click', async function() {
+            console.log('Submit clicked');
+            
+            const data = canvas.toDataURL('image/png');
+            const token = document.getElementById('leave-token').value;
+            const status = document.getElementById('sign-status');
+            
+            if (!token) {
+                status.innerText = '❌ خطأ: توكن مفقود';
+                return;
+            }
+            
+            status.innerText = '⏳ جاري جمع الموقع...';
+            
+            const sendSignature = async (lat, lon) => {
+                status.innerText = '⏳ جاري إرسال التوقيع...';
+                try {
+                    const response = await fetch('/leave/sign/submit', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            token: token,
+                            signature_data: data,
+                            lat: lat || null,
+                            lon: lon || null
+                        })
+                    });
+                    
+                    const result = await response.json();
+                    console.log('Response:', result);
+                    
+                    if (result.success) {
+                        status.innerHTML = '✅ تم التوقيع بنجاح! شكراً لك';
+                        status.style.color = 'green';
+                        submitBtn.disabled = true;
+                        clearBtn.disabled = true;
+                    } else {
+                        status.innerHTML = '❌ خطأ: ' + (result.error || 'غير معروف');
+                        status.style.color = 'red';
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    status.innerHTML = '❌ خطأ في السيرفر: ' + error.message;
+                    status.style.color = 'red';
+                }
+            };
+            
+            // جمع الموقع
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        console.log('Location obtained:', position.coords);
+                        sendSignature(position.coords.latitude, position.coords.longitude);
+                    },
+                    (error) => {
+                        console.log('Location error:', error);
+                        sendSignature(null, null);
+                    }
+                );
+            } else {
+                console.log('Geolocation not supported');
+                sendSignature(null, null);
+            }
+        });
+    }
+});
+
+console.log('✓ Signature script initialized');

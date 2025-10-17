@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <template id="email_leave_sign_link">
+    <t t-set="base_url" t-value="object.env['ir.config_parameter'].sudo().get_param('web.base.url')"/>
+    <div style="font-family:Arial, sans-serif; font-size:14px; color:#333;">
+      <p>Dear <t t-esc="object.employee_name"/>,</p>
+      <p>You have a pending leave request that requires your eSignature.</p>
+      <p>
+        Please click the link below to sign your request:
+        <br/>
+        <a t-att-href="base_url + '/leave/sign/' + object.token"
+           style="background-color:#007bff; color:white; padding:10px 15px; text-decoration:none; border-radius:5px;">
+          Sign Leave Request
+        </a>
+      </p>
+      <p>Thank you,<br/>HR Department</p>
+    </div>
+  </template>
+</odoo>

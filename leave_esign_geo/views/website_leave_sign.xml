@@ -1,0 +1,173 @@
+<odoo>
+  <template id="leave_sign_template" name="Leave Sign Page">
+    <t t-call="website.layout">
+      <div class="container mt-5">
+        <h3>📋 طلب إجازة: <t t-esc="rec.name"/></h3>
+        <p><strong>👤 الموظف:</strong> <t t-esc="rec.employee_name"/></p>
+        <p><strong>📧 البريد:</strong> <t t-esc="rec.employee_email"/></p>
+        <p><strong>📅 من:</strong> <t t-esc="rec.date_from"/></p>
+        <p><strong>📅 إلى:</strong> <t t-esc="rec.date_to"/></p>
+        <p><strong>📝 السبب:</strong> <t t-esc="rec.reason"/></p>
+
+        <h5>✍️ التوقيع</h5>
+        <canvas id="signature-pad" width="700" height="300"
+                style="border: 2px solid #333; background: #fff; width: 100%; height: auto;"></canvas>
+        <div class="mt-2">
+          <button id="clear-sign" class="btn btn-secondary">🗑️ حذف التوقيع</button>
+          <button id="submit-sign" class="btn btn-primary">✅ تأكيد وإرسال</button>
+        </div>
+        <div id="location-status" class="mt-2 alert alert-info" style="display:none;">
+          📍 جاري الحصول على الموقع...
+        </div>
+        <div id="sign-status" class="mt-2"></div>
+
+        <input type="hidden" id="leave-token" t-att-value="rec.token"/>
+
+        <script type="text/javascript">
+        <![CDATA[
+        (function() {
+            'use strict';
+            function initSignature() {
+                const canvas = document.getElementById('signature-pad');
+                const ctx = canvas.getContext('2d');
+                canvas.width = canvas.offsetWidth * window.devicePixelRatio;
+                canvas.height = canvas.offsetHeight * window.devicePixelRatio;
+                ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+                ctx.strokeStyle = '#000';
+                ctx.lineWidth = 2;
+                ctx.lineCap = 'round';
+                ctx.lineJoin = 'round';
+                ctx.fillStyle = '#fff';
+                ctx.fillRect(0, 0, canvas.offsetWidth, canvas.offsetHeight);
+
+                let isDrawing = false;
+                function getPos(e) {
+                    const rect = canvas.getBoundingClientRect();
+                    if(e.touches) { e = e.touches[0]; }
+                    return { x: e.clientX - rect.left, y: e.clientY - rect.top };
+                }
+                canvas.addEventListener('mousedown', e => { isDrawing=true; const pos=getPos(e); ctx.beginPath(); ctx.moveTo(pos.x,pos.y); });
+                canvas.addEventListener('mousemove', e => { if(!isDrawing) return; const pos=getPos(e); ctx.lineTo(pos.x,pos.y); ctx.stroke(); });
+                canvas.addEventListener('mouseup', e => { isDrawing=false; ctx.closePath(); });
+                canvas.addEventListener('mouseleave', e => { isDrawing=false; ctx.closePath(); });
+                canvas.addEventListener('touchstart', e => { isDrawing=true; const pos=getPos(e); ctx.beginPath(); ctx.moveTo(pos.x,pos.y); });
+                canvas.addEventListener('touchmove', e => { if(!isDrawing) return; const pos=getPos(e); ctx.lineTo(pos.x,pos.y); ctx.stroke(); });
+                canvas.addEventListener('touchend', e => { isDrawing=false; ctx.closePath(); });
+
+                document.getElementById('clear-sign').onclick = () => {
+                    ctx.fillStyle = '#fff';
+                    ctx.fillRect(0,0,canvas.offsetWidth,canvas.offsetHeight);
+                };
+
+                document.getElementById('submit-sign').onclick = () => {
+                    const statusDiv = document.getElementById('sign-status');
+                    const token = document.getElementById('leave-token').value;
+                    if(!token) {
+                        statusDiv.innerHTML='❌ خطأ: توكن مفقود';
+                        return;
+                    }
+                    const imageData = canvas.toDataURL('image/png');
+
+                    const sendSig = (lat, lon) => {
+                        console.log('Sending signature with location:', lat, lon);
+                        statusDiv.innerHTML='⏳ جاري إرسال التوقيع...';
+
+                        fetch('/leave/sign/submit', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'X-Requested-With': 'XMLHttpRequest'
+                            },
+                            body: JSON.stringify({
+                                jsonrpc: '2.0',
+                                method: 'call',
+                                params: {
+                                    token: token,
+                                    signature_data: imageData,
+                                    lat: lat !== null && lat !== undefined ? lat : '',
+                                    lon: lon !== null && lon !== undefined ? lon : ''
+                                }
+                            })
+                        })
+                        .then(response => {
+                            console.log('Response status:', response.status);
+                            return response.text();
+                        })
+                        .then(text => {
+                            console.log('Response text:', text);
+                            try {
+                                const data = JSON.parse(text);
+                                console.log('Parsed data:', data);
+
+                                // Handle JSONRPC response format
+                                if (data.result) {
+                                    if (data.result.success) {
+                                        statusDiv.innerHTML = '✅ تم التوقيع بنجاح!';
+                                        statusDiv.className = 'mt-2 alert alert-success';
+                                    } else {
+                                        statusDiv.innerHTML = '❌ خطأ: ' + (data.result.error || 'خطأ غير معروف');
+                                        statusDiv.className = 'mt-2 alert alert-danger';
+                                    }
+                                } else if (data.error) {
+                                    statusDiv.innerHTML = '❌ خطأ في الخادم: ' + JSON.stringify(data.error);
+                                    statusDiv.className = 'mt-2 alert alert-danger';
+                                } else {
+                                    statusDiv.innerHTML = '❌ استجابة غير متوقعة: ' + text;
+                                    statusDiv.className = 'mt-2 alert alert-warning';
+                                }
+                            } catch (e) {
+                                console.error('JSON parse error:', e);
+                                statusDiv.innerHTML = '❌ خطأ في معالجة الاستجابة: ' + text;
+                                statusDiv.className = 'mt-2 alert alert-danger';
+                            }
+                        })
+                        .catch(err => {
+                            console.error('Fetch error:', err);
+                            statusDiv.innerHTML = '❌ خطأ في الاتصال: ' + err.message;
+                            statusDiv.className = 'mt-2 alert alert-danger';
+                        });
+                    };
+
+                    if(navigator.geolocation){
+                        console.log('Getting geolocation...');
+                        navigator.geolocation.getCurrentPosition(
+                            p => {
+                                console.log('Geolocation success:', p.coords.latitude, p.coords.longitude);
+                                sendSig(p.coords.latitude, p.coords.longitude);
+                            },
+                            e => {
+                                console.warn('Geolocation error:', e.message);
+                                sendSig('', '');
+                            },
+                            {
+                                enableHighAccuracy: true,
+                                timeout: 10000,
+                                maximumAge: 0
+                            }
+                        );
+                    } else {
+                        console.warn('Geolocation not supported');
+                        sendSig('', '');
+                    }
+                };
+            }
+            if(document.readyState==='loading'){
+                document.addEventListener('DOMContentLoaded', initSignature);
+            } else {
+                initSignature();
+            }
+        })();
+        ]]>
+        </script>
+      </div>
+    </t>
+  </template>
+
+  <template id="leave_sign_not_found" name="Not Found">
+    <t t-call="website.layout">
+      <div class="container mt-5">
+        <h3>❌ الرابط غير صحيح أو منتهي الصلاحية</h3>
+      </div>
+    </t>
+  </template>
+</odoo>
